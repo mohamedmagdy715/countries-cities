@@ -1,0 +1,12 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+     
+      <!-- Login Form -->
+      <form class="mt-5" (ngSubmit)="login()" ngNativeValidate>
+        <input type="email" id="login" class="fadeIn second" name="login" placeholder="Email" [(ngModel)]="email">
+        <input type="password" id="password" class="fadeIn third my-5" name="login" placeholder="Password" [(ngModel)]="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+    </div>
+  </div>

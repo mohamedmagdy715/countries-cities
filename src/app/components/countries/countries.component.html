@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <form class="row g-3">
+        <div class="col-10 col-lg-6 mx-auto">
+            <label for="addCountryName" class="form-label h4">Add Country</label>
+            <input type="text" class="form-control" id="addCountryName" placeholder="Country Name" name="country"
+                [(ngModel)]="addedCountryName">
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-dark btn-lg mt-3" (click)="addCountry()">Add Country</button>
+        </div>
+    </form>
+    <div class="row">
+        <div *ngFor="let country of countries" class="card col-3 m-auto my-5" style="width: 18rem;" (click)="countryDetails(country.id)">
+            <img src="https://www.countryflags.io/{{getFlag(country.name)}}/flat/64.png" class="card-img-top" alt="{{country.name}}">
+            <div class="card-body mx-auto">
+                <h5 class="card-title">{{country.name}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
